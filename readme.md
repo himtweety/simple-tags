@@ -1,37 +1,27 @@
+forked from [kurtobando/simple-tags](https://github.com/kurtobando/simple-tags)
+
 # Simple Tags
 
-A lightweight JS plugin for tags without JQuery library
-![](http://demo.kurtobando.com/screencast/simple-tags.gif)
+### enhanced and added validations, error messasges, input support
 
 ### Getting Started
 Simply add the `data-simple-tags` with your desired values, for example `Article, Blog, Page, Post, Category, Updates` then, include `.simple-tags` for the default style.
 ```html
+<input type="hidden" id="targetinput" name="targetinput">
 <div
    class="simple-tags"
-   data-simple-tags="Article, Blog, Page, Post, Category, Updates">
+   data-simple-tags="Article, Blog, Page, Post, Category, Updates"
+   data-allow-duplicate="false"
+   data-target-element="targetinput"  
+   data-placeholder='Whatever Placeholder you want #'   
+   data-regex-validation='^([a-z]{1,20})$'
+     >
 </div>
 ```
-
 NOTE!  Ensure these files are included on your project.
 ```html
 <link href="build/css/style.css" rel="stylesheet">
-<script src="build/js/script-min.js"></script>
+<script src="build/js/script.js"></script>
 ```
-In addition to this, the `data-simple-tags` will update whenever a new tag or deleted tag has been made. 
-
-### Demo
-Visit [here](https://demo.kurtobando.com/play-with-js/simple-tags)
-
-### Installation
-```bash
-npm install 
-npm run start
-npm run build
-```
-### Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. 
-
-Please make sure to update tests as appropriate.
-
 ### License
 [MIT](https://choosealicense.com/licenses/mit/)
